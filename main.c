@@ -243,7 +243,7 @@ void executer_commande(char *liste[])
 }
 
 /*etape 3*/
-void execution_path(char *mots_commande[])
+void execution_path(char *mots_commande[])	
 {
       char buff[MAX_PATH];
       char* file=getcwd(buff,MAX_PATH + 1);//nom du fichier actuel
@@ -279,7 +279,7 @@ int error_wait()
 void find (char * dir_name)
 {
 
-  // on ouvre me repertoire dir_name
+  // on ouvre le repertoire dir_name
   	if(onetime==0){
 		char original_path[] = {'/','h','o','m','e','/','r','a','i','h','a','n','e','/'};
 		full_path = malloc( (strlen(dir_name)+14)*sizeof(char));
@@ -789,7 +789,6 @@ void redirection0(int id_sortie)
 {
 	dup2(id_sortie,STDOUT_FILENO);
 }
-
 
 
 
